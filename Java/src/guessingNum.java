@@ -16,7 +16,7 @@ public class guessingNum
 
 		num = rand.nextInt((int) Math.pow(10, diff) + 1);
 
-		System.out.println("Number generated from 0-" + (int) Math.pow(10, diff));
+		System.out.println("Generated number from 0-" + (int) Math.pow(10, diff));
 		
 		while(guess != num)
 		{

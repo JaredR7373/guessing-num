@@ -6,7 +6,7 @@ public class guessingNum
 {
 	public static void main(String[] args)
 	{
-		int diff, num;
+		int diff, num, guess = -1, guessCount = 0;
 		
 		Random rand = new Random();
 		Scanner key = new Scanner(System.in);
@@ -17,7 +17,22 @@ public class guessingNum
 		num = rand.nextInt((int) Math.pow(10, diff) + 1);
 
 		System.out.println("Number generated from 0-" + (int) Math.pow(10, diff));
-		System.out.println("Num: " + num);
+		
+		while(guess != num)
+		{
+			System.out.print("Enter guess: ");
+			guess = key.nextInt();
+			
+			guessCount++;
+
+			if (guess > num)
+				System.out.println("Too high");
+			else if (guess < num)
+				System.out.println("Too low");
+		}
+
+		System.out.println("Congradulations!");
+		System.out.println("Guesses: " + guessCount);
 	}
 }
 		

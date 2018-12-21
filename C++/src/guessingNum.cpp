@@ -12,7 +12,7 @@ int main()
 	cout << "Enter number of zeros: ";
 	cin >> diff;
 
-	num = rand()%pow(10, diff) + 1;
+	num = rand()%(int) pow(10, diff) + 1;
 
 	cout << "Generated number from 0-" << pow(10, diff) << endl;
 

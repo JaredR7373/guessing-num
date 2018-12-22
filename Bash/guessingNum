@@ -1,0 +1,24 @@
+#!/bin/bash
+echo "Enter number of zeros:"
+read diff
+range=$((10**diff))
+num=$((RANDOM%$((range + 1))))
+echo "Generated number from 0-$range"
+guess=$((num + 1))
+guessCount=0
+while [ "$guess" -ne "$num" ]
+do
+	echo "Enter guess: "
+	read guess
+	guessCount=$((guessCount + 1))
+	if [ $guess -gt $num ]
+	then
+		echo "Too high"
+	fi
+	if [ $guess -lt $num ]
+	then
+		echo "Too low"
+	fi
+done
+echo "Congradulations!"
+echo "Guesses: $guessCount"
